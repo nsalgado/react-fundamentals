@@ -3,7 +3,8 @@ import { PropTypes } from "prop-types";
 import queryString from 'query-string'
 import { BattleService } from '../utils/api'
 import PlayerAvatar from './PlayerPreview'
-import Link from "react-router-dom/Link";
+import Link from "react-router-dom/Link"
+import Loading from './Loading'
 
 
 function Profile (props) {
@@ -98,7 +99,7 @@ export default class Results extends React.Component {
 
 	render () {
 		if (this.state.loading) {
-			return <p>Loading</p>
+			return <Loading/>
 		} 
 		if (this.state.error) {
 			return (
